@@ -1,0 +1,17 @@
+﻿@model C__Build_List.Models.MyList<C__Build_List.Models.Product>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Tên</th>
+        <th>Giá</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price.ToString("N0")</td>
+        </tr>
+    }
+</table>
